@@ -15,10 +15,13 @@ function App() {
       <h4>A Discord API Wrapper written in ReactJS</h4>
         <img src={logo} className="App-logo spin tiny" alt="logo" />
         <Link href="/bot">
-        <a className='button'>
+        <button className='button'>
           Get Started
-        </a>
+        </button>
       </Link>
+      <a className='button-outlined' href='https://github.com/rndrmu/discord.tsx'>
+          Github
+        </a>
       </header>
     </div>
     </Route>
