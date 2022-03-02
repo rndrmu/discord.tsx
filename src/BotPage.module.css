@@ -1,0 +1,124 @@
+.header {
+    background-color: #5865f2;
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.botConfig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botConsole {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px 20px;
+    margin: 10px 5em;
+    max-height: 500px;
+    min-height: 500px;
+    background-color: #191919; /* to make it look like a terminal */
+    overflow-y: scroll;
+    justify-content: end;
+    bottom: 0;
+}
+
+.botConsole > p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    /* terminals need a monospace font */
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.spacedText {
+    letter-spacing: .2em !important;
+}
+
+.WelcomeMsg {
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Neutraface';
+}
+
+.commandsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.commandsList > h1 {
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.commandGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.commandGroup input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.commandGroup button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    padding: 7.5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000;
+    font-family: 'Neutraface';
+}
+/* put label above text input */
+.commandGroup > label::before {
+}
