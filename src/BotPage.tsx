@@ -39,8 +39,7 @@ function BotPage() {
         </section>
         <div id='console' className={styles.botConsole}>
                 <span className={styles.WelcomeMsg}>
-                <p>WELCOME TO</p>
-                <p className={styles.spacedText}>DISCORD.TSX</p>
+              <p>WELCOME TO DISCORD.TSX</p>
                 </span>
         </div>
       </div> 
