@@ -30,13 +30,14 @@
 }
 
 .tiny {
-  height: 7vmin;
+  height: 15vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .spin {
     /* alternate betweem spin and spin-alternate */
-    animation: spin 5s infinite linear;
+    animation: spin 10s infinite linear;
+    filter: brightness(0) invert(1);
   }
 }
 

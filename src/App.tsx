@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logov2.svg';
+import logo from './logo.svg';
 import djsLogo from './discordjs-logo.svg';
 import './App.css';
 import { Link, Route } from "wouter";
@@ -11,7 +11,7 @@ function App() {
     <Route path='/'>
     <div className="App">
       <header className="App-header">
-      <h2 className='App-logo logo'>DISCORD.TSX</h2>
+      <h2 className='App-logo logo'>discord.tsx</h2>
       <h4>A Discord API Wrapper written in ReactJS</h4>
         <img src={logo} className="App-logo spin tiny" alt="logo" />
         <Link href="/bot">
@@ -19,7 +19,7 @@ function App() {
           Get Started
         </button>
       </Link>
-      <a className='button-outlined' href='https://github.com/rndrmu/discord.tsx'>
+      <a className='button-outlined' href='https://github.com/rndrmu/discord.tsx' target="_blank">
           Github
         </a>
       </header>
