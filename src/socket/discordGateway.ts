@@ -9,6 +9,8 @@ import {
 import {
     gatewayErrorHandler
 } from "./gatewayErrorHandler";
+import { emit } from "process";
+import EventEmitter from "events";
 
 
 export const connectToGateway = () => {
@@ -23,6 +25,7 @@ export const connectToGateway = () => {
     }
 
     localStorage.setItem('discordToken', token);
+    localStorage.setItem('discordBotId', botId);
 
     const gatewayConnect = new WebSocket(`wss://gateway.discord.gg/?v=9&encoding=json`);
 
@@ -99,7 +102,7 @@ const handleWebSocketConnection = (socket: WebSocket, token: string) => {
                 break;
             default:
                 console.log('[UNKNOWN] Received Unknown Event');
-                addMsgToConsole("error", '[UNKNOWN] Received Unknown Event');
+                addMsgToConsole("error", '[UNKNOWN] Received Unknown Event : op: ' + data.op);
                 break;
 
 
@@ -169,3 +172,19 @@ const resume = (token: string, session_id: string, seq_num: number) => {
         "t": "RESUME"
     }
 }
+
+const joinVoiceChannel = () => {
+    return {
+        "op": 4,
+        "d": {
+            "guild_id": "740492918367846481",
+            "channel_id": "740492918875488320",
+            "self_mute": false,
+            "self_deaf": true,
+        },
+        "s": 42,
+        "t": "VOICE_STATE_UPDATE"
+    }
+}
+
+const dp = new EventEmitter()

@@ -34,7 +34,7 @@
 button {
     background-color: #61dafb;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -43,6 +43,8 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Neutraface';
 }
 
 .botConsole {
@@ -227,4 +229,19 @@ button {
 
 #console.debug {
     color: rgb(106, 245, 180);
+}
+
+.voiceStuff {
+    display: flex;
+    flex-direction: row;
+}
+
+.voiceStuff > input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

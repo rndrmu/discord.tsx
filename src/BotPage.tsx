@@ -1,5 +1,6 @@
 import styles from './BotPage.module.css';
 import {connectToGateway} from './socket/discordGateway';
+import {connectToVoice} from './voice/VoiceUtils';
 
 function BotPage() {
     return (
@@ -32,9 +33,17 @@ function BotPage() {
         <section id='cmds' className={styles.commandsList}>
             <h1>Set up Commands</h1>
             <div className={styles.commandGroup}>
-            <input type="text" name="command1" id=""  placeholder='Command' />
-            <input type="text" name="response1" id="" placeholder='Response' />
+            <input type="text" id="command1"  placeholder='Command' />
+            <input type="text" id="response1" placeholder='Response' />
             <button id='newCommandsGroup'>+</button>
+            </div>
+        </section>
+        <section id='voiceStuff' className={styles.commandsList}>
+            <h1>Voice Channel</h1>
+            <div className={styles.voiceStuff}>
+            <input type="text" id="voiceChannel"  placeholder='Voice Channel Id' />
+            <input type="text" id="serverId"      placeholder='Server Id' />
+            <button>Connect</button>
             </div>
         </section>
         <div id='console' className={styles.botConsole}>
